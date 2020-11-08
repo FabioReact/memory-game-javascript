@@ -81,6 +81,11 @@ p {
 	width: 100%;
 }
 
+.background {
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
 .background > img {
 	height: 100%;
 	width: 100%;
