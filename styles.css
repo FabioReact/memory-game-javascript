@@ -2,7 +2,7 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v7.0.29,
 * Autoprefixer: v9.7.6
-* Browsers: last 4 version
+* Browsers: last 4 version,> 1%
 */
 
 html {
@@ -15,10 +15,9 @@ html {
 
 body {
 	margin: 0;
-	/* background-color: #3a7eff; */
 	background-color: var(--color-primary);
 	color: white;
-	font-family: 'Indie Flower', cursive;
+	font-family: "Indie Flower", cursive;
 }
 
 main {
@@ -29,11 +28,11 @@ main {
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-			-ms-flex-direction: column;
-					flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
 	-webkit-box-align: center;
-			-ms-flex-align: center;
-					align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
 h1 {
@@ -42,7 +41,8 @@ h1 {
 	margin: 1.6rem;
 }
 
-p, button {
+p,
+button {
 	font-size: 2rem;
 }
 
@@ -54,24 +54,26 @@ p {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	-ms-flex-wrap: wrap;
-			flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
 .card {
-	-webkit-transition: .6s;
-	-o-transition: .6s;
-	transition: .6s;
+	-webkit-transition: 0.6s;
+	-o-transition: 0.6s;
+	transition: 0.6s;
 	position: relative;
 	margin: 16px;
 	padding: var(--card-padding);
-	border: 1px solid rgba(255, 255, 255, .5);
+	border: 1px solid rgba(255, 255, 255, 0.5);
 	border-radius: 8px;
 	height: var(--card-height);
 	width: var(--card-width);
 	-webkit-transform-style: preserve-3d;
-					transform-style: preserve-3d;
+	transform-style: preserve-3d;
 }
 
 .card > div {
@@ -87,7 +89,7 @@ p {
 
 .reveal {
 	-webkit-transform: rotateY(180deg);
-					transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
 .pokemon {
@@ -99,7 +101,7 @@ p {
 	height: var(--card-height);
 	width: var(--card-width);
 	-webkit-transform: rotateY(180deg);
-					transform: rotateY(180deg);
+	transform: rotateY(180deg);
 	background-color: rgb(255, 255, 255);
 }
 
@@ -107,7 +109,7 @@ p {
 button {
 	/* background-color: #fff; */
 	background-color: #fd9800;
-	font-family: 'Indie Flower', cursive;
+	font-family: "Indie Flower", cursive;
 	color: #fff;
 	border: none;
 	padding: 8px 16px;
@@ -137,11 +139,11 @@ button#play {
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: center;
-			-ms-flex-pack: center;
-					justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 	-webkit-box-align: center;
-			-ms-flex-align: center;
-					align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
 .modal-container > .modal {

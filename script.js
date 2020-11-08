@@ -50,16 +50,21 @@ const createCard = id => {
 	// Création de la face découverte
 	const imgPokemon = document.createElement("img")
 	imgPokemon.setAttribute("src", `assets/images/${id}.png`)
-	imgPokemon.setAttribute("class", "pokemon")
+	imgPokemon.setAttribute("class", "pokemon") // récup avec getAttribute()
 	imgPokemon.setAttribute("data-id", id)
 	card.appendChild(imgPokemon)
 
 	// Création de notre méthode qui s'éxécutera lors du click
 	divFaceCache.addEventListener("click", (event) => {
+		// Test si jamais la même card est cliquée deux fois de suite
+		const isRevealed = $(card).hasClass("reveal")
+		if (isRevealed) return null
+	
 		const selectedId = $(event.target).data("id")
 		if (essaie.length < 2) {
 			essaie.push(selectedId)
-			card.setAttribute("class", "card reveal")
+			// card.setAttribute("class", "card reveal")
+			$(card).addClass("reveal")
 		}
 		if (essaie.length === 2) {
 			if (essaie[0] === essaie[1]) {
